@@ -3,14 +3,35 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import { Navbar, Sidebar, Footer } from './components'
 
 import styled from 'styled-components'
-import Testing from './Testing'
-
+import { Cart, Checkout, Home, SingleProduct, Error, About, Products, PrivateRoute} from './pages'
 
 function App() {
-  return <div>
-      <h4>comfy sloth starter</h4>
-      <Testing />
-    </div>
+  return <Router>
+    <Navbar />
+    <Sidebar />
+      <Switch>
+        <Route exact path="/">
+          <Home />  
+        </Route>  
+        <Route exact path="/about">
+          <About />  
+        </Route>  
+        <Route exact path="/cart">
+          <Cart />  
+        </Route>  
+        <Route exact path="/products">
+          <Products />  
+        </Route>  
+        <Route exact path="/products/:id" children={<SingleProduct />} />
+        <Route exact path="/checkout">
+          <Checkout />  
+        </Route> 
+        <Route path="*">
+          <Error />
+        </Route>
+      </Switch>  
+      <Footer />    
+    </Router>
 }
 
 export default App

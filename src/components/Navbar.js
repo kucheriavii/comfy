@@ -9,7 +9,15 @@ import { useProductsContext } from '../context/products_context'
 import { useUserContext } from '../context/user_context'
 
 const Nav = () => {
-  return <h4>navbar</h4>
+  return <NavContainer>
+    <div className='nav-center'>
+      <div className='nav-header'>
+        <Link to="/">
+          <img src={logo} alt="comfy sloth" />
+        </Link>
+      </div>
+    </div>
+  </NavContainer>
 }
 
 const NavContainer = styled.nav`
