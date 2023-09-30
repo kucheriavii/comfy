@@ -9,8 +9,8 @@ const Contact = () => {
         <p>
           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Possimus maxime exercitationem facilis corrupti optio iure voluptatum officia omnis aut, numquam eius, amet odio tempore architecto placeat vero quibusdam! Maxime, commodi?
         </p>
-        <form className='contact-form'>
-          <input type="email" className='form-input' placeholder='enter email' />
+        <form className='contact-form' action="https://formspree.io/f/mgejpado" method="POST">
+          <input type="email" className='form-input' placeholder='enter email' name="email"/>
           <button type="submit" className='submit-btn'>
             subscribe
           </button>
