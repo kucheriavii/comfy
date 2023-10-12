@@ -1,1 +1,3 @@
 ## Notes
+
+##Relocated to windows
