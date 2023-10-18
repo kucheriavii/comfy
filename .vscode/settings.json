@@ -10,18 +10,9 @@
             "port": 3306,
             "driver": "MySQL",
             "name": "mysql",
-            "database": "mysql",
-            "username": "root"
-        },
-        {
-            "previewLimit": 50,
-            "server": "localhost",
-            "port": 5432,
-            "askForPassword": true,
-            "driver": "PostgreSQL",
-            "name": "postgres",
             "database": "test",
-            "username": "kucheriavii"
+            "username": "kucheriavii",
+            "askForPassword": true
         }
     ]
 }
