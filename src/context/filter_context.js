@@ -60,6 +60,7 @@ export const FilterProvider = ({ children }) => {
     let value = e.target.value
     if (name === 'category'){
       value = e.target.textContent;
+      console.log(value)
     }
     dispatch({type:UPDATE_FILTERS, payload: {name, value}})
   }
@@ -74,7 +75,7 @@ export const FilterProvider = ({ children }) => {
     </FilterContext.Provider>
   )
 }
-// make sure use
+// make sure use 
 export const useFilterContext = () => {
   return useContext(FilterContext)
 }
