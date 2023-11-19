@@ -56,11 +56,14 @@ export const FilterProvider = ({ children }) => {
     dispatch({type:UPDATE_SORT, payload: value})
   }
   const updateFilters = (e) => {
+    e.preventDefault();
     let name = e.target.name
     let value = e.target.value
     if (name === 'category'){
       value = e.target.textContent;
-      console.log(value)
+    }
+    if (name === 'color'){
+      value = e.target.dataset.color;
     }
     dispatch({type:UPDATE_FILTERS, payload: {name, value}})
   }
