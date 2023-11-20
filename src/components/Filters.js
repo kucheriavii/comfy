@@ -7,7 +7,7 @@ import { FaCheck } from 'react-icons/fa'
 const Filters = () => {
   const {
     filters:{
-      text, category, company,color, min_price, max_price, shipping
+      text, category, company,color, min_price, max_price, price, shipping
     },
     updateFilters,
     clearFilters,
@@ -82,6 +82,19 @@ const Filters = () => {
               </div>
             </form>
         {/* end of colors */}
+        {/* price */}
+        <div className='form-control'>
+          <h5>price</h5>
+          <p className="price">{formatPrice(price)}</p>
+          <input 
+            type="range" 
+            name="price" 
+            min={min_price} 
+            max={max_price} 
+            onChange={updateFilters} 
+            value={price}/>
+        </div>
+        {/* end price */}
     </div>
   </Wrapper>
 }
