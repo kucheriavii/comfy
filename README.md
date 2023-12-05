@@ -6,3 +6,4 @@
 ##switched to gnome
 ##git not working
 #2023-11-21 busy by main work
+#switched OS
